@@ -77,7 +77,7 @@ class Conversation implements Chatbot {
   public String respond(String inputString) {
 
     // split the inputString into a list of words using .split(" ")
-    String words[] = inputString.split(" ");
+    String[] words = inputString.split(" ");
 
     boolean changed = false;
 
