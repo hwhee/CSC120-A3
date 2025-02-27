@@ -52,6 +52,10 @@ class Conversation implements Chatbot {
     //prints goodbye and adds it to the transcript
     System.out.println("Ok... um... bye!");
     transcript[transcript_index++] = "Ok... um... bye!";
+
+    //closes transcript
+    input.close();
+
   }
 
   /**
@@ -81,24 +85,19 @@ class Conversation implements Chatbot {
       if (words[i].equalsIgnoreCase("I")){
         words[i] = "you";
         changed = true;
-      }
-      else if (words[i].equalsIgnoreCase("me")){
+      } else if (words[i].equalsIgnoreCase("me")){
         words[i] = "you";
         changed = true;
-      }
-      else if (words[i].equalsIgnoreCase("am")){
+      } else if (words[i].equalsIgnoreCase("am")){
         words[i] = "are";
         changed = true;
-      }
-      else if (words[i].equalsIgnoreCase("you")){
+      } else if (words[i].equalsIgnoreCase("you")){
         words[i] = "I";
         changed = true;
-      }
-      else if (words[i].equalsIgnoreCase("my")){
+      } else if (words[i].equalsIgnoreCase("my")){
         words[i] = "your";
         changed = true;
-      }
-      else if (words[i].equalsIgnoreCase("your")){
+      } else if (words[i].equalsIgnoreCase("your")){
         words[i] = "my";
         changed = true;
       }
